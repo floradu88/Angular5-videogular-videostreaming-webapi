@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -35,14 +32,12 @@ namespace StreamingDemoWebAPI
             }
 
             return await _client.GetStreamAsync(urlBlob);
-            
         }
 
         ~AzureVideoStreamService()
         {
             if (_client != null)
                 _client.Dispose();
-
         }
     }
 }
